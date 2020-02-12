@@ -4,6 +4,7 @@ from random import choice
 
 from flask import Flask, render_template, request
 
+
 # "__name__" is a special Python variable for the name of the current module.
 # Flask wants to know this to know what any imported things are relative to.
 app = Flask(__name__)
@@ -35,11 +36,17 @@ def greet_person():
 
     player = request.args.get("person")
 
+    compliment_list = []
     compliment = choice(AWESOMENESS)
+    compliment_list.append(compliment)
+    compliment2 = choice(AWESOMENESS)
+    compliment_list.append(compliment2)
+    compliment3 = choice(AWESOMENESS)
+    compliment_list.append(compliment3)
 
     return render_template("compliment.html",
                            person=player,
-                           compliment=compliment)
+                           compliment_list= compliment_list)
 
 
 @app.route('/game')
