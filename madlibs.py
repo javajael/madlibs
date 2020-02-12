@@ -47,7 +47,6 @@ def show_madlib_form():
     """ Submitting form"""
     y_n_game = request.args.get("y_n_game")
     player = request.args.get("person")
-    print(player)
 
     if y_n_game == "yes":
         return render_template("game.html")
@@ -66,7 +65,8 @@ def show_madlib():
     adjective = request.args.get("adjective")
 
     return render_template("madlib.html", proper_noun=proper_noun,
-        color=color, noun=noun, adjective=adjective)
+                            color=color, noun=noun,
+                            adjective=adjective)
 
 
 if __name__ == '__main__':

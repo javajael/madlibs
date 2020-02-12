@@ -7,6 +7,7 @@
     <p>Hi {{ person }} I think you're {{ compliment }}!</p>
     <p>Would you like to play a game?
         <form action="/game">
+            <input type="hidden" name="person" value={{ person }}>
             <input type="radio" name="y_n_game" value="yes">
             <label>Yes</label>
             <input type="radio" name="y_n_game" value="no">
