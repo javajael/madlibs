@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <title>Game Form</title>
+</head>
+<body>
+    <p>Hi {{ person }} I think you're {{ compliment }}!</p>
+    <p>Would you like to play a game?
+        <form action="/madlib">
+            Tell me the name of a person? <input type="text" name="proper_noun"><br>
+            A Color? <input type="text" name="color"><br>
+            A Noun? <input type="text" name="noun"><br>
+            An Adjective <input type="text" name="adjective"><br>
+            <input type="submit">
+        </form>
+    </p>
+</body>
+</html>
